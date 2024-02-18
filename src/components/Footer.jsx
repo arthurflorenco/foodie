@@ -37,6 +37,8 @@ const Footer = () => {
                 <div className="footer-section-columns">
                     <span>Terms & Conditions</span>
                     <span>Privacy Policy</span>
+                    <p>&copy; 2024 </p>
+                    <p>Designe by: Arthur Florenco</p>
                 </div>
             </div>
         </div>
