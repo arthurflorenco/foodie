@@ -14,7 +14,7 @@ Follow the instructions below to set up and run the project locally on your mach
 1. Clone the repository:
 
 `bash
-git clone https://github.com/arthurflorenco/FoodieLP.git`
+git clone https://github.com/arthurflorenco/foodie.git`
 
 
 Navegue até o diretório do projeto:
