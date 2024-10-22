@@ -38,7 +38,7 @@ const Footer = () => {
                     <span>Terms & Conditions</span>
                     <span>Privacy Policy</span>
                     <p>&copy; 2024 </p>
-                    <p>Designe by: Arthur Florenco</p>
+                    <p>Desenvolved by: Arthur Florenço</p>
                 </div>
             </div>
         </div>
