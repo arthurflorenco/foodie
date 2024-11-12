@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PickMeals from "../assets/pick-meals-image.png";
 import ChooseMeals from "../assets/choose-image.png";
 import DeliveryMeals from "../assets/delivery-image.png";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Work = () => {
   const workInfoData = [
@@ -21,6 +23,35 @@ const Work = () => {
       text: "Lorem ipsum dolor sit amet consectetur. Maecenas orci et lorem ipsum",
     },
   ];
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+    gsap.fromTo('.work-section-top', { opacity: 0, y: 999, },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        ease: 'power1.inOut',
+        scrollTrigger: {
+          trigger: '.work-section-wrapper',
+          //markers: true,
+          start: 'top 90%',
+        }
+      })
+    gsap.fromTo('.work-section-info', {
+      opacity: 0,
+      y: 999,
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: 'power1.inOut',
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: '.work-section-bottom',
+        start: 'top 90%',
+      }
+    })
+  }, [])
   return (
     <div className="work-section-wrapper">
       <div className="work-section-top">

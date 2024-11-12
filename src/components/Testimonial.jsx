@@ -2,6 +2,7 @@ import React from "react";
 import ProfilePic from "../assets/john-doe-image.png";
 import { AiFillStar } from "react-icons/ai";
 
+
 const Testimonial = () => {
     return (
         <div className="work-section-wrapper">

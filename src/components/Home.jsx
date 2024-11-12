@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BannerBackground from "../assets/home-banner-background.png";
 import BannerImage from "../assets/home-banner-image.png";
 import Navbar from "./Navbar";
 import { FiArrowRight } from "react-icons/fi";
+import { gsap } from "gsap";
 
 const Home = () => {
+
+  useEffect(() => {
+    gsap.fromTo('.bannarImage', {x: 999,}, 
+    {
+      x: 0,
+      duration: 1.5,
+      rotation: 360,
+      ease: 'power1.inOut',
+    })
+    return () => {
+      gsap.killTweensOf('.bannarImage')
+    }
+  }, [])
+
   return (
     <div className="home-container">
       <Navbar />
@@ -25,7 +40,7 @@ const Home = () => {
           </button>
         </div>
         <div className="home-image-section">
-          <img src={BannerImage} alt="" />
+          <img className="bannarImage" src={BannerImage} alt="prato" />
         </div>
       </div>
     </div>
